@@ -20,11 +20,13 @@ from django.urls import path
 from django.conf.urls import include
 from . import views
 
+
 urlpatterns = [
     path('', views.home, name='home'),
     path('contact/', views.contact, name='contact'),
     path('admin/', admin.site.urls),
     path('blog/', include('blog.urls')),
+    path('about/', views.about, name='about'),
 ]
 
 if settings.DEBUG:
