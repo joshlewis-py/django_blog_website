@@ -4,27 +4,32 @@
 {% load static %}
 
 
-<div class="intro" style="width:50%; margin: 0 auto">
+<div class="intro" style="width:50%; margin: auto">
 
   <p>View some of our blog posts about <br> food and past events!</p>
 
   </div>
 
-<div id="content" style="width:20%; margin: 0 auto;">
 
 
 
-          {% for post in posts %}
 
-              <h2><a href="{% url 'post_detail' pk=post.pk %}"><u>{{ post.title }}</u></a></h2>
-               <a href="{% url 'post_detail' pk=post.pk %}"><img src="{{ post.image.url }}" alt="Smiley face" height="200" width="300"><br></a>
-              <small>published: {{ post.published_date }}</small>
-              <p>{{ post.text|linebreaksbr }}</p>
-              <a href="{% url 'post_detail' pk=post.pk %}"><small><u>Read More</u></small></a>
+  <div style="width:85%; margin-left: auto;">
+   {% for post in posts %}
+       <div style="float:left; width:500px; height:200px; margin-bottom: 15%;">
+         <h2><a href="{% url 'post_detail' pk=post.pk %}"><u>{{ post.title }}</u></a></h2>
+          <a href="{% url 'post_detail' pk=post.pk %}"><img src="{{ post.image.url }}" alt="Smiley face" height="200" width="300"><br></a>
+         <small>published: {{ post.published_date }}</small>
+         <p>{{ post.text|linebreaksbr }}</p>
+         <a href="{% url 'post_detail' pk=post.pk %}"><small><u>Read More</u></small></a>
+       </div>
+   {% endfor%}
+   </div>
 
-          {% endfor %}
 
-</div>
+
+
+
 
 
 {% endblock %}
