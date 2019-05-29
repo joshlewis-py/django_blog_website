@@ -23,11 +23,10 @@ from . import views
 
 urlpatterns = [
     path('', views.home, name='home'),
-    path('contact/', views.contact, name='contact'),
     path('admin/', admin.site.urls),
     path('blog/', include('blog.urls')),
     path('about/', views.about, name='about'),
-    path('contact-us/', views.contact_us, name='contact_us'),
+    path('contact_us/', views.contact_us, name='contact_us'),
 ]
 
 if settings.DEBUG:

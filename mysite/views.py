@@ -9,9 +9,6 @@ from django.core.mail import send_mail
 def home(request):
     return render(request, 'mysite/index.html', {})
 
-def contact(request):
-    return render(request, 'mysite/contact.html', {})
-
 def about(request):
     return render(request, 'mysite/about.html', {})
 
@@ -30,4 +27,4 @@ def contact_us(request):
     else:
         form = ContactForm()
 
-    return render(request, 'mysite/contact-us.html', {'form': form})
+    return render(request, 'mysite/contact_us.html', {'form': form})
