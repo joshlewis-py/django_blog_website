@@ -14,15 +14,16 @@
 
 
 
-  <div style="width:85%; margin-left: auto;">
+  <div style="width:70%; margin-left: auto;">
    {% for post in posts %}
-       <div style="float:left; width:500px; height:200px; margin-bottom: 15%;">
+       <div style="float:left; width:500px; height:400px;">
          <h2><a href="{% url 'post_detail' pk=post.pk %}"><u>{{ post.title }}</u></a></h2>
           <a href="{% url 'post_detail' pk=post.pk %}"><img src="{{ post.image.url }}" alt="Smiley face" height="200" width="300"><br></a>
          <small>{{ post.published_date }}</small>
          <p>{{ post.text|linebreaksbr }} ... </p>
          <a href="{% url 'post_detail' pk=post.pk %}"><small><u>Read More</u></small></a>
        </div>
+
    {% endfor%}
    </div>
 
