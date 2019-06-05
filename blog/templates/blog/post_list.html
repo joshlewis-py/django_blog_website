@@ -12,7 +12,8 @@
          <h2><a href="{% url 'post_detail' pk=post.pk %}"><u>{{ post.title }}</u></a></h2>
           <a href="{% url 'post_detail' pk=post.pk %}"><img src="{{ post.image.url }}" alt="Smiley face" height="200" width="300"><br></a>
          <small>{{ post.published_date }}</small>
-         <p>{{ post.text|truncatechars:20 }} <a href="{% url 'post_detail' pk=post.pk %}"><small style="font-size: 65%;"><u>Read More</u></small></a></p>
+         <p>{{ post.text|truncatechars:20 }}<br>
+         <a href="{% url 'post_detail' pk=post.pk %}"><small style="font-size: 65%;"><u>Read More</u></small></a></p>
 
        </div>
 
