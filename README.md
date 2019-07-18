@@ -6,3 +6,4 @@ Features:
 - Django Admin App for creating blog posts easily.
 - A working email form.
 - PEP8 complience. 
+- Bootstrap components. 
